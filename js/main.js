@@ -166,7 +166,8 @@ function initUtilities() {
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const statusTag = s => ({
   "Available":    '<span class="status st-ok">Available</span>',
-  "Coming Soon":  '<span class="status st-soon">Coming Soon</span>'
+  "Coming Soon":  '<span class="status st-soon">Coming Soon</span>',
+  "Pending":      '<span class="status st-pending">Pending</span>'
 }[s] || `<span class="status st-na">${esc(s)}</span>`);
 
 function initLibrary() {
@@ -182,7 +183,7 @@ function initLibrary() {
       st.innerHTML = statusTag("Available") + `&nbsp;<span class="status st-na" style="font-size:.72rem">${esc(ext)}</span>`;
       b.innerHTML  = `<a class="btn btn-green btn-sm" href="${esc(f)}" target="_blank" rel="noopener">Open</a><a class="btn btn-out btn-sm" href="${esc(f)}" download>Download</a>`;
     } else {
-      st.innerHTML = statusTag("Coming Soon");
+      st.innerHTML = statusTag(c.dataset.status || "Coming Soon");
       b.innerHTML  = '<span class="btn btn-out btn-sm" aria-disabled="true">Not yet published</span>';
     }
   });
