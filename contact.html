@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact Us | TexCycle AI — R26-IT-081</title>
+<meta name="description" content="Get in touch with the TexCycle AI research group.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+<main id="main">
+
+<div class="page-head">
+  <div class="wrap">
+    <div class="crumbs"><a href="index.html">Home</a> / Contact Us</div>
+    <h1>Contact Us</h1>
+    <p>Get in touch with the TexCycle AI research group.</p>
+  </div>
+</div>
+
+<section class="block">
+  <div class="wrap">
+    <div class="grid g2" style="align-items:start;gap:clamp(2rem,5vw,5rem)">
+
+      <!-- Left: contact info -->
+      <div>
+        <p class="section-label">Research group</p>
+        <h2>Contact Details</h2>
+        <dl class="meta" style="margin:1.5rem 0">
+          <dt>Institution</dt>
+          <dd>Sri Lanka Institute of Information Technology (SLIIT)</dd>
+          <dt>Faculty</dt>
+          <dd>Faculty of Computing</dd>
+          <dt>Specialization</dt>
+          <dd>Information Technology</dd>
+          <dt>Project ID</dt>
+          <dd>R26-IT-081</dd>
+          <dt>Panel</dt>
+          <dd>IT-P06</dd>
+          <dt>Research group</dt>
+          <dd>TexCycle AI</dd>
+        </dl>
+
+        <div class="divider"></div>
+
+        <h3 style="margin-bottom:1rem">Member Emails</h3>
+        <p style="font-size:.9rem;color:var(--text-muted);margin-bottom:1rem">Published member emails (where approved):</p>
+        <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:10px">
+          <li style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:#fff;border:1px solid var(--border);border-radius:var(--r-md)">
+            <span style="font:700 .8rem var(--font-head);color:var(--emerald);background:var(--mint);border-radius:99px;padding:3px 10px">Member 02</span>
+            <a href="mailto:it22215338@my.sliit.lk" style="font-size:.9rem;color:var(--emerald)">it22215338@my.sliit.lk</a>
+          </li>
+          <li style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:#fff;border:1px solid var(--border);border-radius:var(--r-md)">
+            <span style="font:700 .8rem var(--font-head);color:var(--emerald);background:var(--mint);border-radius:99px;padding:3px 10px">Member 03</span>
+            <a href="mailto:IT22221278@my.sliit.lk" style="font-size:.9rem;color:var(--emerald)">IT22221278@my.sliit.lk</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right: contact form -->
+      <div class="card" style="padding:clamp(1.5rem,3vw,2.5rem)">
+        <h2 style="margin-bottom:1.5rem">Send a Message</h2>
+        <form id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="Your full name" aria-describedby="e-name">
+            <div class="err" id="e-name"></div>
+          </div>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com" aria-describedby="e-email">
+            <div class="err" id="e-email"></div>
+          </div>
+          <div class="field">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" placeholder="What is this about?" aria-describedby="e-subject">
+            <div class="err" id="e-subject"></div>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here…" aria-describedby="e-message"></textarea>
+            <div class="err" id="e-message"></div>
+          </div>
+          <button class="btn btn-green" type="submit" style="width:100%;justify-content:center">Send Message</button>
+          <div id="formOut" aria-live="polite"></div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+<script src="js/main.js"></script>
+</body>
+</html>
