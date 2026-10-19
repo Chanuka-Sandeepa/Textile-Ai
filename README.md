@@ -45,4 +45,4 @@ Visit `http://localhost:8000`.
 - Check the browser console for errors.
 - Confirm hosting status before submission.
 
-**Deployment:** https://chanuka-sandeepa.github.io/Textile-Ai/documents.html
+**Deployment:** https://chanuka-sandeepa.github.io/Textile-Ai/index.html
