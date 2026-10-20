@@ -1,6 +1,11 @@
 /* TexCycle AI portfolio — shared behaviour v2 */
 const CONFIG = {
-  groupEmail: "",
+  groupEmails: [
+    "it22281814@my.sliit.lk",
+    "it22215338@my.sliit.lk",
+    "IT22221278@my.sliit.lk",
+    "it22281678@my.sliit.lk"
+  ],
   year: new Date().getFullYear()
 };
 const PAGES = [
@@ -239,14 +244,11 @@ function initContactForm() {
       first.focus(); return;
     }
     const d = Object.fromEntries(new FormData(form));
-    if (CONFIG.groupEmail) {
-      const href = `mailto:${CONFIG.groupEmail}?subject=${encodeURIComponent(d.subject)}&body=${encodeURIComponent(d.message+"\n\n— "+d.name+" ("+d.email+")")}`;
-      out.className = "msg ok";
-      out.innerHTML = `Your message is ready, but has <strong>not been sent yet</strong>. <a href="${href}">Open in your email app</a> to send it.`;
-    } else {
-      out.className = "msg ok";
-      out.innerHTML = "Your details passed validation, but <strong>nothing was sent</strong>. This is a frontend prototype — no email service is connected.";
-    }
+    const href = `mailto:${CONFIG.groupEmails.join(",")}?subject=${encodeURIComponent(d.subject)}&body=${encodeURIComponent(d.message+"\n\n— "+d.name+" ("+d.email+")")}`;
+    out.className = "msg ok";
+    out.setAttribute("role","status");
+    out.textContent = "Opening your email app with your message addressed to the TexCycle AI team. Review and send it there.";
+    window.location.href = href;
   });
 }
 
